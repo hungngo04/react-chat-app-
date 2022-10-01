@@ -1,19 +1,23 @@
 import React from 'react'
+import Add from '../img/addAvatar.png';
 
 const Register = () => {
     return (
         <div className="formContainer">
             <div className="formWrapper">
-                <span className="logo">Chat app</span>
+                <span className="logo"></span>
                 <span className='title'>Register</span>
                 <form action="">
                     <input type="text" placeholder='Display name' />
                     <input type="email" placeholder='Email' />
                     <input type="password" placeholder='Password' />
-                    <input type="file"/>
+                    <input required style={{ display: "none" }} type="file" id="file" />
+                    <label htmlFor="file">
+                        <img src={Add} alt="" />
+                        <span>Add an avatar</span>
+                    </label>
                     <button>Sign up</button>
                 </form>
-                <p>Do not have an account? Login</p>
             </div>
         </div>
     )
