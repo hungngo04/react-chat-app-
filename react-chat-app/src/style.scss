@@ -94,24 +94,18 @@
     overflow: hidden;
 
     .sidebarLeft {
-      width: 70px;
+      width: 80px;
       background-color: white;
       border-right: 1px solid #f4f7fb;
       display: flex;
       justify-content: center;
+      flex-direction: column;
+      align-items: center;
       
-      //STOP HERE!!!!! MAKE THE ICON LARGER
-      FiUser {
-        font-size: 800 !important;
-      }
-      
-      .fi-user {
-        width: 50px;
-        height: 50px;
-        margin-top: 150px;
-        background-color: #E6EBF5;
-        color: grey;
-
+      span {
+        margin-bottom: 40px;
+        align-items: center;
+        
       }
     }
 
@@ -119,6 +113,7 @@
       flex: 0.7;
       border-right: 1px solid #f4f7fb;
       background-color: #f4f7fb;
+      border-left: 1px solid #EAEBF4;
 
       .navbar {
         display: flex;
@@ -128,12 +123,13 @@
         padding: 10px;
         justify-content: space-between;
         color: #485056;
+
       }
 
       .logo {
         font-weight: 600;
         font-size: 21px;   
-        margin-left: 30px;   
+        margin-left: 5px;   
       }
 
       .user {
@@ -166,8 +162,7 @@
       }        
 
       .search {
-        border-bottom: 1px solid grey;
-
+        
         .searchForm {
           input {
             background-color: #E6EBF5;
@@ -188,11 +183,12 @@
       }
 
       .recent {
-        font-size: 16px;
+        font-size: 15px;
         font-weight: 600;
         color: rgb(73,80,87);
-        margin-left: 10px;
+        margin-left: 15px;
         margin-top: 10px;
+        margin-bottom: 10px;
       }
 
       .userChat {
@@ -203,16 +199,28 @@
         color: #485056;
         cursor: pointer;
         font-size: medium;
-
+        height: 80px;
+        
         &:hover{
           background-color:#E6EBF5;
         }
 
         img {
-          width: 50px;
-          height: 50px;
+          width: 30px;
+          height: 30px;
           border-radius: 50%;
           object-fit: cover;
+        }
+
+        .userChatInfo {
+          span {
+            font-size: 15px;
+            font-weight: 500;
+          }
+          p {
+            font-size: 11px;
+            color: #7A7F9A;
+          }
         }
       }
 

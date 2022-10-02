@@ -2,6 +2,7 @@ import React from 'react'
 import {SidebarLeft} from '../components/SidebarLeft'
 import { Sidebar } from '../components/Sidebar'
 import { Chat } from '../components/Chat'
+import { Chats } from '../components/Chats'
 
 const Home = () => {
     return (
