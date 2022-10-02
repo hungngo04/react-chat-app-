@@ -223,13 +223,41 @@
           }
         }
       }
-
     }
-  }
 
+  }
     .chat {
       flex: 2;
       background-color: white;
+
+      .chatInfo {
+        height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        color: #485055;
+        margin-top: 5px;
+        margin-left: 15px;
+        border-bottom: black;
+        height: 400px;
+        
+        img {
+          width: 30px;
+          height: 30px;
+          border-radius: 50%;
+          object-fit: cover;
+        }
+      }
+
+      .chatIcons {
+        display: flex;
+        gap: 10px;
+
+        span {
+          height: 24px;
+          cursor: pointer;
+        }
+      }
     }
 }
 
