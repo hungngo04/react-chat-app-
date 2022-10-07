@@ -3,7 +3,7 @@ import Messages from './Message'
 
 export const Message = () => {
   return (
-    <div>Message</div>
+    <div className='message'>Message</div>
   )
 }
 

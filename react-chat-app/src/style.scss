@@ -271,9 +271,14 @@
       }
 
       .messages {
-        background-color: #7168EF;
         color: white;
         padding: 10px;
+        height: calc(100% - 150px);
+      }
+
+      .message {
+        background-color: #7168EF;
+
       }
 
       .input {
