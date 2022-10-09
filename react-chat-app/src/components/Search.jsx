@@ -4,7 +4,7 @@ const Search = () => {
     return (
         <div className="search">
             <div className="searchForm">
-                <input type="text" placeholder='&nbsp;&nbsp;&nbsp;&nbsp;Search messages or users'/>
+                <input type="text" placeholder='Search messages or users'/>
             </div>
             <div className='recent'>
                 <p>Recents</p>
