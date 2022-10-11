@@ -11,7 +11,7 @@ export const Chat = () => {
     <div className='chat'>
       <div className="chatInfo">
         <div className="name">
-          <img src="https://images.pexels.com/photos/13728847/pexels-photo-13728847.jpeg?auto=compress&cs=tinysrgb&w=800&lazy=load" alt="" />
+          <img src={data.user.photoURL} alt="" />
           <span>{data.user.displayName}</span>
         </div>
         
