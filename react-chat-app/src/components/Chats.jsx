@@ -5,11 +5,13 @@ import { db } from "../firebase";
 import '../style.scss'
 import { useContext } from 'react';
 import { AuthContext } from '../context/AuthContext';
+import { ChatContext } from '../context/ChatContext';
 
 export const Chats = () => {
     const [chats, setChats] = useState([]);
-
     const {currentUser} = useContext(AuthContext);
+    const {dispatch} = useContext(ChatContext);
+
     
     useEffect(() => {
         const getChats = () => {
@@ -25,10 +27,14 @@ export const Chats = () => {
 
     console.log(Object.entries(chats));
 
+    const handleSelect = (u) => {
+        dispatch({type:"CHANGE_USER", payload: u})
+    }
+
     return (
         <div className='chats'>
             {Object.entries(chats)?.map(chat => (
-                <div className="userChat" key={chat[0]}>
+                <div className="userChat" key={chat[0]} onClick={() => handleSelect(chat[1].userInfo)}>
                     <img src={chat[1].userInfo.photoURL} alt="" />
                     <div className="userChatInfo">
                         <span><b>{chat[1].userInfo.displayName}</b></span>

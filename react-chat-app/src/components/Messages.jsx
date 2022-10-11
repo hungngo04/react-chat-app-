@@ -11,12 +11,12 @@ export const Messages = () => {
   const { data } = useContext(ChatContext);
 
   useEffect(() => {
-    const unsub = onSnapshot(doc(db, "chats", data.chatId), (doc) => {
+    const unSub = onSnapshot(doc(db, "chats", data.chatId), (doc) => {
       doc.exists() && setMessages(doc.data().messages);
     })
 
     return () => {
-      unsub();
+      unSub();
     }
   }, [data.chatId]);
 
