@@ -2,14 +2,17 @@ import React from 'react'
 import '../style.scss'
 import Messages from './Messages'
 import Input from './Input'
+import { useContext } from 'react'
+import { ChatContext } from '../context/ChatContext'
 
 export const Chat = () => {
+  const { data } = useContext(ChatContext);
   return (
     <div className='chat'>
       <div className="chatInfo">
         <div className="name">
           <img src="https://images.pexels.com/photos/13728847/pexels-photo-13728847.jpeg?auto=compress&cs=tinysrgb&w=800&lazy=load" alt="" />
-          <span>Hung</span>
+          <span>{data.user.displayName}</span>
         </div>
         
         <div className="chatIcons">

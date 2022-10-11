@@ -1,18 +1,32 @@
 import React from 'react'
+import { useState } from 'react';
+import { useContext } from 'react';
+import { AuthContext } from '../context/AuthContext';
+import { ChatContext } from '../context/ChatContext';
 import attach from '../img/attach.png'
 import img from '../img/img.png'
 
 export const Input = () => {
+  const [text, setText] = useState("");
+  const [img, setImg] = useState(null); 
+
+  const {currentUser} = useContext(AuthContext);
+  const {data} = useContext(ChatContext);
+
+  const handleSend = () => {
+
+  }
+
   return (
     <div className="input">
         <input type="text" placeholder='Type something...' />
         <div className="send">
             <img src={attach} alt="" />
-            <input type="file" style={{display: "none"}} id="file"/>
+            <input type="file" style={{display: "none"}} id="file" onChange={e => setImg(e.target.files[0])}/>
             <label htmlFor="file">
                 <img src={img} alt="" />
             </label>
-            <button>Send</button>
+            <button onClick={handleSend}>Send</button>
         </div>
     </div>
   )
